@@ -26,6 +26,7 @@ def find_greater_pair(src)
       new_array.push(src[index][0])
     else
       new_array.push(src[index][1])
+    end
   end
   new_array
 end
@@ -44,6 +45,6 @@ def total_even_pairs(src)
     if (src[index][0] % 2) == 0 && (src[index][1] % 2) == 0
       total = total + src[index][0] + src[index][1]
     end
-    total
   end
+  total
 end
