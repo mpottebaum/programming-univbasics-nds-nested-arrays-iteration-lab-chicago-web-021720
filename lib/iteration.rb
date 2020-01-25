@@ -7,10 +7,15 @@ def join_ingredients(src)
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
   new_array = []
-  row_index
-  while  do
-    new_element = "I love #{src[index][0]} and #{src[index][1]} on my pizza"
-    new_array.push(new_element)
+  row_index = 0
+  while row_index < src.length do
+    element_index = 0
+    while element_index < src[row_index].length do
+      new_element = "I love #{src[row_index][element_index]} and #{src[row_index][element_index]} on my pizza"
+      new_array << new_element
+      element_index += 1
+    end
+    row_index += 1
   end
   new_array
 end
@@ -19,14 +24,19 @@ def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
-  length = src.length
   new_array = []
-  length.times do |index|
-    if src[index][0] > src[index][1]
-      new_array.push(src[index][0])
-    else
-      new_array.push(src[index][1])
+  row_index = 0
+  while row_index < src.length do
+    element_index = 1
+    max = src[row_element][0]
+    while element_index < src[row_index].length do
+      if src[row_index][element_index] > max
+        max = src[row_index][element_index]
+      end
+      element_index += 1
     end
+    new_array << max
+    row_index += 1
   end
   new_array
 end
