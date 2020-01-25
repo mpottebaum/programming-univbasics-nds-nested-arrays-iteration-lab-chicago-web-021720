@@ -6,9 +6,9 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
-  length = src.length
   new_array = []
-  length.times do |index|
+  row_index
+  while  do
     new_element = "I love #{src[index][0]} and #{src[index][1]} on my pizza"
     new_array.push(new_element)
   end
